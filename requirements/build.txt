@@ -1,0 +1,6 @@
+spin
+meson
+meson-python
+ninja
+cython
+git+https://github.com/lysnikolaou/cymem.git@free-threading

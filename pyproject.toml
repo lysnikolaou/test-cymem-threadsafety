@@ -1,0 +1,21 @@
+[build-system]
+build-backend = "mesonpy"
+requires = [
+    "meson-python",
+    "Cython >= 3.1.0",
+    "cymem @ git+https://github.com/lysnikolaou/cymem@free-threading",
+]
+
+[project]
+name = "test-cymem-threadsafety"
+version = "0.1.0"
+description = "Multithreaded tests for cymem"
+readme = "README.md"
+requires-python = ">=3.13"
+
+[tool.spin]
+package = "test_cymem_threadsafety"
+commands = [
+  "spin.cmds.meson.build",
+  "spin.cmds.meson.test",
+]
