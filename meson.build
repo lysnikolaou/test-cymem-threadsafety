@@ -4,7 +4,7 @@ project(
   version: '0.1.0',
 )
 
-py = import('python').find_installation()
+py = import('python').find_installation(pure: false)
 dep_py = py.dependency()
 
 cy = meson.get_compiler('cython')
